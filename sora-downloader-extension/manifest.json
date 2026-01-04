@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Sora Video Downloader (No Watermark)",
+  "version": "1.0.0",
+  "description": "Download Sora videos without watermark from your profile page",
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://sora.chatgpt.com/*",
+    "https://videos.openai.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://sora.chatgpt.com/profile*", "https://sora.chatgpt.com/p/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

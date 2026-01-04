@@ -1,0 +1,194 @@
+/* Sora Video Downloader Styles */
+
+.sora-dl-checkbox-container {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sora-dl-checkbox-container:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.sora-dl-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #10a37f;
+}
+
+.sora-dl-checkbox-label {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Floating action bar */
+.sora-dl-action-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sora-dl-action-bar.hidden {
+  display: none;
+}
+
+.sora-dl-count {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sora-dl-count span {
+  color: #10a37f;
+  font-weight: 700;
+}
+
+.sora-dl-btn {
+  background: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sora-dl-btn:hover {
+  background: #0d8a6a;
+  transform: translateY(-1px);
+}
+
+.sora-dl-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sora-dl-btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.sora-dl-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Progress overlay */
+.sora-dl-progress-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sora-dl-progress-overlay.hidden {
+  display: none;
+}
+
+.sora-dl-progress-modal {
+  background: #1a1a2e;
+  border-radius: 16px;
+  padding: 32px;
+  min-width: 400px;
+  max-width: 90%;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sora-dl-progress-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sora-dl-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.sora-dl-progress-item-status {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sora-dl-progress-item-name {
+  flex: 1;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sora-dl-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #10a37f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.sora-dl-check {
+  color: #10a37f;
+  font-size: 18px;
+}
+
+.sora-dl-error {
+  color: #ef4444;
+  font-size: 18px;
+}
+
+/* Selected video highlight */
+.sora-dl-selected {
+  outline: 3px solid #10a37f !important;
+  outline-offset: -3px;
+}
